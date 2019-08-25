@@ -1,0 +1,3 @@
+<?php
+define('BOT_IDENTIFIER', 'bot<MY_BOT_IDENTIFIER>'); 
+define('CHAT_ID', '<MY_CHAT_ID>');
