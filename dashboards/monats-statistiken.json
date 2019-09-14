@@ -1,404 +1,404 @@
 {
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": "-- Grafana --",
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "type": "dashboard"
-        }
-      ]
-    },
-    "editable": true,
-    "gnetId": null,
-    "graphTooltip": 0,
-    "id": 21,
-    "links": [],
-    "panels": [
+  "annotations": {
+    "list": [
       {
-        "columns": [],
-        "datasource": "teslalogger",
-        "fontSize": "100%",
-        "gridPos": {
-          "h": 20,
-          "w": 24,
-          "x": 0,
-          "y": 0
-        },
-        "id": 2,
-        "links": [],
-        "pageSize": null,
-        "scroll": true,
-        "showHeader": true,
-        "sort": {
-          "col": 2,
-          "desc": true
-        },
-        "styles": [
-          {
-            "alias": "Time",
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "pattern": "Time",
-            "type": "date"
-          },
-          {
-            "alias": "Ø Temperatur",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "avg. Temp",
-            "thresholds": [],
-            "type": "number",
-            "unit": "short"
-          },
-          {
-            "alias": "Preis (28 ct)",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "Preis pro 28 ct",
-            "thresholds": [],
-            "type": "number",
-            "unit": "currencyEUR"
-          },
-          {
-            "alias": "Preis (39 ct)",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "Preis pro 39 ct",
-            "thresholds": [],
-            "type": "number",
-            "unit": "currencyEUR"
-          },
-          {
-            "alias": "",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "km gefahren",
-            "thresholds": [],
-            "type": "number",
-            "unit": "locale"
-          },
-          {
-            "alias": "verbrauchte Energie",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "kWh verbraucht",
-            "thresholds": [],
-            "type": "number",
-            "unit": "kwatth"
-          },
-          {
-            "alias": "Verbrauch pro km",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "wH / km",
-            "thresholds": [],
-            "type": "number",
-            "unit": "watth"
-          },
-          {
-            "alias": "gefahrene Zeit",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "Std. gefahren",
-            "thresholds": [],
-            "type": "number",
-            "unit": "h"
-          },
-          {
-            "alias": "Monat",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "Month",
-            "thresholds": [],
-            "type": "number",
-            "unit": "short"
-          },
-          {
-            "alias": "geladene Energie",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "kWh geladen",
-            "thresholds": [],
-            "type": "number",
-            "unit": "kwatth"
-          },
-          {
-            "alias": "Ladezeit",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "dateFormat": "YYYY-MM-DD HH:mm:ss",
-            "decimals": 2,
-            "mappingType": 1,
-            "pattern": "Std. geladen",
-            "thresholds": [],
-            "type": "number",
-            "unit": "h"
-          },
-          {
-            "alias": "",
-            "colorMode": null,
-            "colors": [
-              "rgba(245, 54, 54, 0.9)",
-              "rgba(237, 129, 40, 0.89)",
-              "rgba(50, 172, 45, 0.97)"
-            ],
-            "decimals": 2,
-            "pattern": "/.*/",
-            "thresholds": [],
-            "type": "number",
-            "unit": "short"
-          }
-        ],
-        "targets": [
-          {
-            "format": "table",
-            "group": [],
-            "hide": false,
-            "metricColumn": "none",
-            "rawQuery": true,
-            "rawSql": "SELECT\n  DATE_FORMAT(StartDate, '%M %Y') as 'Month',\n  sum(km_diff) AS 'km gefahren',\n  sum(consumption_kWh) AS 'kWh verbraucht',\n  (sum(consumption_kWh) / sum(km_diff)) * 1000 AS 'wH / km',\n  sum(UNIX_TIMESTAMP(EndDate) - UNIX_TIMESTAMP(StartDate)) / (60 * 60) as 'Std. gefahren',\n  avg(outside_temp_avg) AS ' avg. Temp'\nFROM trip\nWHERE\n  $__timeFilter(StartDate)\nGROUP BY Month\nORDER BY StartDate DESC",
-            "refId": "A",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "column"
-                }
-              ]
-            ],
-            "timeColumn": "time",
-            "where": [
-              {
-                "name": "$__timeFilter",
-                "params": [],
-                "type": "macro"
-              }
-            ]
-          },
-          {
-            "format": "table",
-            "group": [],
-            "metricColumn": "none",
-            "rawQuery": true,
-            "rawSql": "SELECT\n  DATE_FORMAT(StartDate, '%M %Y') as 'Month',\n  sum(charging.charge_energy_added) AS 'kWh geladen',\n  sum(UNIX_TIMESTAMP(EndDate) - UNIX_TIMESTAMP(StartDate)) / (60 * 60) as 'Std. geladen',\n  sum(charging.charge_energy_added) * 0.28 as 'Preis pro 28 ct',\n  sum(charging.charge_energy_added) * 0.39 as 'Preis pro 39 ct'\n  FROM charging\nLEFT JOIN chargingstate ON chargingstate.EndChargingID = charging.id\nWHERE\n  $__timeFilter(chargingstate.StartDate) and TIMESTAMPDIFF(MINUTE, chargingstate.StartDate, chargingstate.EndDate) > 3 and chargingstate.EndChargingID - chargingstate.StartChargingID > 4\nGROUP BY Month\nORDER BY StartDate DESC",
-            "refId": "E",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "column"
-                }
-              ]
-            ],
-            "timeColumn": "time",
-            "where": [
-              {
-                "name": "$__timeFilter",
-                "params": [],
-                "type": "macro"
-              }
-            ]
-          },
-          {
-            "format": "table",
-            "group": [],
-            "hide": true,
-            "metricColumn": "none",
-            "rawQuery": true,
-            "rawSql": "SELECT * FROM trip",
-            "refId": "B",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "column"
-                }
-              ]
-            ],
-            "timeColumn": "time",
-            "where": [
-              {
-                "name": "$__timeFilter",
-                "params": [],
-                "type": "macro"
-              }
-            ]
-          },
-          {
-            "format": "table",
-            "group": [],
-            "hide": true,
-            "metricColumn": "none",
-            "rawQuery": true,
-            "rawSql": "SELECT * FROM chargingstate",
-            "refId": "C",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "column"
-                }
-              ]
-            ],
-            "timeColumn": "time",
-            "where": [
-              {
-                "name": "$__timeFilter",
-                "params": [],
-                "type": "macro"
-              }
-            ]
-          },
-          {
-            "format": "table",
-            "group": [],
-            "hide": true,
-            "metricColumn": "none",
-            "rawQuery": true,
-            "rawSql": "SELECT * FROM charging",
-            "refId": "D",
-            "select": [
-              [
-                {
-                  "params": [
-                    "value"
-                  ],
-                  "type": "column"
-                }
-              ]
-            ],
-            "timeColumn": "time",
-            "where": [
-              {
-                "name": "$__timeFilter",
-                "params": [],
-                "type": "macro"
-              }
-            ]
-          }
-        ],
-        "timeFrom": null,
-        "title": "Monats Statistiken",
-        "transform": "table",
-        "type": "table"
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
       }
-    ],
-    "schemaVersion": 16,
-    "style": "dark",
-    "tags": [],
-    "templating": {
-      "list": []
-    },
-    "time": {
-      "from": "now-2y",
-      "to": "now"
-    },
-    "timepicker": {
-      "nowDelay": "",
-      "refresh_intervals": [
-        "5s",
-        "10s",
-        "30s",
-        "1m",
-        "5m",
-        "15m",
-        "30m",
-        "1h",
-        "2h",
-        "1d"
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 21,
+  "links": [],
+  "panels": [
+    {
+      "columns": [],
+      "datasource": "teslalogger",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 20,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 2,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "Ø Temperatur",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "avg. Temp",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Preis (28 ct)",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Preis pro 28 ct",
+          "thresholds": [],
+          "type": "number",
+          "unit": "currencyEUR"
+        },
+        {
+          "alias": "Preis (39 ct)",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Preis pro 39 ct",
+          "thresholds": [],
+          "type": "number",
+          "unit": "currencyEUR"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "km gefahren",
+          "thresholds": [],
+          "type": "number",
+          "unit": "locale"
+        },
+        {
+          "alias": "verbrauchte Energie",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "kWh verbraucht",
+          "thresholds": [],
+          "type": "number",
+          "unit": "kwatth"
+        },
+        {
+          "alias": "Verbrauch pro km",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "wH / km",
+          "thresholds": [],
+          "type": "number",
+          "unit": "watth"
+        },
+        {
+          "alias": "gefahrene Zeit",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Std. gefahren",
+          "thresholds": [],
+          "type": "number",
+          "unit": "h"
+        },
+        {
+          "alias": "Monat",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Month",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "geladene Energie",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "kWh geladen",
+          "thresholds": [],
+          "type": "number",
+          "unit": "kwatth"
+        },
+        {
+          "alias": "Ladezeit",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Std. geladen",
+          "thresholds": [],
+          "type": "number",
+          "unit": "h"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
       ],
-      "time_options": [
-        "5m",
-        "15m",
-        "1h",
-        "6h",
-        "12h",
-        "24h",
-        "2d",
-        "7d",
-        "30d"
-      ]
-    },
-    "timezone": "",
-    "title": "Monats Statistiken",
-    "uid": "aTRzliigz",
-    "version": 16
-  }
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  DATE_FORMAT(StartDate, '%M %Y') as 'Month',\n  sum(km_diff) AS 'km gefahren',\n  sum(consumption_kWh) AS 'kWh verbraucht',\n  (sum(consumption_kWh) / sum(km_diff)) * 1000 AS 'wH / km',\n  sum(UNIX_TIMESTAMP(EndDate) - UNIX_TIMESTAMP(StartDate)) / (60 * 60) as 'Std. gefahren',\n  avg(outside_temp_avg) AS ' avg. Temp'\nFROM trip\nWHERE\n  $__timeFilter(StartDate)\nGROUP BY Month\nORDER BY StartDate DESC",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  DATE_FORMAT(StartDate, '%M %Y') as 'Month',\n  sum(charging.charge_energy_added) AS 'kWh geladen',\n  sum(UNIX_TIMESTAMP(EndDate) - UNIX_TIMESTAMP(StartDate)) / (60 * 60) as 'Std. geladen',\n  sum(charging.charge_energy_added) * 0.28 as 'Preis pro 28 ct',\n  sum(charging.charge_energy_added) * 0.39 as 'Preis pro 39 ct'\n  FROM charging\nLEFT JOIN chargingstate ON chargingstate.EndChargingID = charging.id\nWHERE\n  $__timeFilter(chargingstate.StartDate) and TIMESTAMPDIFF(MINUTE, chargingstate.StartDate, chargingstate.EndDate) > 3 and chargingstate.EndChargingID - chargingstate.StartChargingID > 4\nGROUP BY Month\nORDER BY StartDate DESC",
+          "refId": "E",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "table",
+          "group": [],
+          "hide": true,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT * FROM trip",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "table",
+          "group": [],
+          "hide": true,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT * FROM chargingstate",
+          "refId": "C",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "table",
+          "group": [],
+          "hide": true,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT * FROM charging",
+          "refId": "D",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "title": "Monats Statistiken",
+      "transform": "table",
+      "type": "table"
+    }
+  ],
+  "schemaVersion": 16,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-2y",
+    "to": "now"
+  },
+  "timepicker": {
+    "nowDelay": "",
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Monats Statistiken",
+  "uid": "aTRzliigz",
+  "version": 16
+}
