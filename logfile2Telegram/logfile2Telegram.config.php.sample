@@ -1,3 +1,10 @@
 <?php
-define('BOT_IDENTIFIER', 'bot<MY_BOT_IDENTIFIER>'); 
-define('CHAT_ID', '<MY_CHAT_ID>');
+return [
+    'env' => 'prod', // 'dev' or 'prod'
+    'telegram_bot_identifier' => 'bot<MY_BOT_IDENTIFIER>',
+    'telegram_chat_id' => '<MY_CHAT_ID>',
+    'db_host' => 'localhost',
+    'db_user' => 'root',
+    'db_password' => 'teslalogger',
+    'db_name' => 'teslalogger',
+];
