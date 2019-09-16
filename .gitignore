@@ -1,2 +1,3 @@
-/logfile2Telegram/logfile2Telegram.config.php
+/logfile2Telegram/config/config.php
 .idea
+/logfile2Telegram/vendor/

@@ -1,0 +1,19 @@
+{
+    "name": "dkuss/logfile2telegram",
+    "description": "Script for teslalogger to send logfile information to Telegram channels",
+    "authors": [
+        {
+            "name": "Dominik Kuss",
+            "email": "dominik@codebreak.de"
+        }
+    ],
+    "require": {
+        "ext-mysqli": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Logfile2Telegram\\": ["src/"]
+        }
+    }
+}
