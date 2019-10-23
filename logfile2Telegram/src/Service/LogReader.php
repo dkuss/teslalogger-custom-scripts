@@ -29,7 +29,7 @@ class LogReader
         $now = new \DateTime();
         foreach ($inputArray as $line) {
 
-            if (empty($line)) {
+            if (empty(trim($line))) {
                 continue;
             }
 
@@ -44,7 +44,7 @@ class LogReader
             }
 
             $diff_in_seconds = $now->getTimestamp() - $dateTime->getTimestamp();
-            if ($diff_in_seconds > $seconds) { // Meldungen älter als 5 Minuten und 5 Sekunden irgnorieren -> 305
+            if ($diff_in_seconds > $seconds) { // Meldungen älter als x Sekunden ignorieren
                 continue;
             }
 
@@ -68,9 +68,8 @@ class LogReader
                 }
             }
 
-            if (!empty(trim($line))) {
-                $outputArray[] = trim($line) . "\n";
-            }
+            $outputArray[] = trim($line) . "\n";
+
         }
         return $outputArray;
     }
