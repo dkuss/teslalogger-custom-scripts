@@ -58,15 +58,20 @@ class TelegramMessage
     public function formatTrip($data)
     {
         $output = "------------------------\n";
-        $output .= "Batteriestand: " . $data->battery_level . "%\n";
-        $output .= "Ideale Reichweite: " . number_format($data->EndRange, 2, ",", ".") . " km\n";
-        $output .= "Kilometerstand: " . number_format($data->EndKm, 0, ",", ".") . " km\n";
-        $output .= "Letzter Trip: \n";
+        $output .= "AKTUELL: \n";
+        $output .= "Akt. SoC: " . $data->EndSoc . "%\n";
+        $output .= "Akt. Typ. Range: " . number_format($data->EndRange, 2, ",", ".") . " km\n";
+        $output .= "Km Stand: " . number_format($data->EndKm, 0, ",", ".") . " km\n";
+        $output .= "------------------------\n";
+        $output .= "LETZTER TRIP: \n";
         $output .= "Start: " . $data->StartDate . "\n";
+        $output .= "Ende: " . $data->EndDate . "\n";
         $output .= "Dauer: " . number_format($data->DurationMinutes, 0, ",", ".") . " Minuten\n";
-        $output .= "Verbrauch: " . number_format($data->consumption_kWh, 2, ",", ".") . " kWh\n";
-        $output .= "Durchschnittsverbrauch: " . number_format($data->avg_consumption_kWh_100km, 2, ",", ".") . " kWh\n";
-        $output .= "Entfernung: " . number_format($data->km_diff, 2, ",", ".") . " km\n";
+        $output .= "Entfernung: " . number_format($data->km_diff, 2, ",", ".") . " km (TR: " . number_format(($data->StartRange - $data->EndRange), 2, ",", ".") . " km)\n";
+        $output .= "Typ. Range: " . number_format($data->StartRange, 2, ",", ".") . " km → " . number_format($data->EndRange, 2, ",", ".") . " km\n";
+        $output .= "SoC: " . $data->StartSoc . "% → " . $data->EndSoc . "%\n";
+        $output .= "Ges. Verbrauch: " . number_format($data->consumption_kWh, 2, ",", ".") . " kWh\n";
+        $output .= "Ø Verbrauch: " . number_format($data->avg_consumption_kWh_100km * 10, 0, ",", ".") . " Wh/km\n";
         return $output;
     }
 
@@ -86,13 +91,20 @@ class TelegramMessage
     public function formatCharge($data)
     {
         $output = "------------------------\n";
-        $output .= "Letzte Ladung: \n";
+        $output .= "AKTUELL: \n";
+        $output .= "Akt. SoC: " . $data->End_battery_level . "%\n";
+        $output .= "Akt. Typ. Range: " . number_format($data->EndSOC, 2, ",", ".") . " km\n";
+        $output .= "Km Stand: " . number_format($data->odometer, 0, ",", ".") . " km\n";
+        $output .= "------------------------\n";
+        $output .= "LETZTE LADUNG: \n";
         $output .= "Start: " . $data->StartDate . "\n";
+        $output .= "Ende: " . $data->EndDate . "\n";
         $output .= "Dauer: " . number_format($data->MinuteDiff, 0, ",", ".") . " Minuten\n";
-        $output .= "Power geladen: " . number_format($data->charge_energy_added, 2, ",", ".") . " kWh\n";
-        $output .= "Entfernung geladen: " . number_format($data->SOCgeladen, 2, ",", ".") . " km\n";
-        $output .= "End SoC: " . number_format($data->End_battery_level, 0, ",", ".") . "%\n";
-        $output .= "End Reichweite: " . number_format($data->EndSOC, 0, ",", ".") . " km\n";
+        $output .= "Strom geladen: " . number_format($data->charge_energy_added, 2, ",", ".") . " kWh\n";
+        $output .= "Reichweite geladen: " . number_format($data->SOCgeladen, 2, ",", ".") . " km\n";
+        $output .= "SoC: " . number_format($data->Start_battery_level, 0, ",", ".") . "% → " . number_format($data->End_battery_level, 0, ",", ".") . "%\n";
+        $output .= "Typ. Range: " . number_format($data->StartSOC, 2, ",", ".") . " km → " . number_format($data->EndSOC, 2, ",", ".") . " km\n";
+        $output .= "Max. Range: " . number_format($data->CalculatedMaxRange, 2, ",", ".") . " km\n";
         return $output;
     }
 

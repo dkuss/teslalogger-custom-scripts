@@ -9,10 +9,11 @@ class TripFinder
     public function findTrips($seconds = 305)
     {
         $trips = [];
-        $sql = "SELECT t.*, p.battery_level
+        $sql = "SELECT t.*, pe.battery_level as EndSoc, ps.battery_level as StartSoc
                 FROM trip t
                 LEFT JOIN drivestate d ON t.EndDate = d.EndDate
-                LEFT JOIN pos p ON d.EndPos = p.id
+                LEFT JOIN pos pe ON d.EndPos = pe.id
+                LEFT JOIN pos ps ON d.StartPos = ps.id
                 WHERE t.endDate >= DATE_SUB(CURRENT_TIMESTAMP, INTERVAL " . (int) $seconds . " SECOND) ORDER BY t.EndDate ASC;";
         if ($result = mysqli_query(DbConnection::getDbLink(), $sql)) {
             while ($trip = mysqli_fetch_object($result)) {
