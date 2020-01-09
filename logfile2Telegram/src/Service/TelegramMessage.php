@@ -67,7 +67,7 @@ class TelegramMessage
         $output .= "Start: " . $data->StartDate . "\n";
         $output .= "Ende: " . $data->EndDate . "\n";
         $output .= "Dauer: " . number_format($data->DurationMinutes, 0, ",", ".") . " Minuten\n";
-        $output .= "Entfernung: " . number_format($data->km_diff, 2, ",", ".") . " km (TR: " . number_format(($data->StartRange - $data->EndRange), 2, ",", ".") . " km)\n";
+        $output .= "Distanz: " . number_format($data->km_diff, 2, ",", ".") . " km (TR: " . number_format(($data->StartRange - $data->EndRange), 2, ",", ".") . " km)\n";
         $output .= "Typ. Range: " . number_format($data->StartRange, 2, ",", ".") . " km → " . number_format($data->EndRange, 2, ",", ".") . " km\n";
         $output .= "SoC: " . $data->StartSoc . "% → " . $data->EndSoc . "%\n";
         $output .= "Ges. Verbrauch: " . number_format($data->consumption_kWh, 2, ",", ".") . " kWh\n";
@@ -119,12 +119,17 @@ class TelegramMessage
             $now = new \DateTime();
             $this->prependLine($now->format("Y-m-d H:i:s") . "\n");
 
-            $data = [
-                'text' => $this->messageContent,
-                'chat_id' => $this->chatId
-            ];
-            echo file_get_contents("https://api.telegram.org/" . $this->botId . "/sendMessage?" . http_build_query($data));
+            $this->sendText($this->messageContent);
         }
+    }
+
+    public function sendText($text)
+    {
+        $data = [
+            'text' => (string) $text,
+            'chat_id' => $this->chatId
+        ];
+        echo file_get_contents("https://api.telegram.org/" . $this->botId . "/sendMessage?" . http_build_query($data));
     }
 
     /**
