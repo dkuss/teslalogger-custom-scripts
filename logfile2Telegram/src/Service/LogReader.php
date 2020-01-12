@@ -60,6 +60,12 @@ class LogReader
             if (strpos($line, 'Streamingtoken:') !== false) {
                 continue;
             }
+            if (strpos($line, 'Distance:') !== false) {
+                continue;
+            }
+            if (strpos($line, 'ScanMyTesla FastMode:') !== false) {
+                continue;
+            }
             if (strpos($line, 'Waiting for car to go to sleep') !== false) {
                 $numberPos = strrpos($line, ' ') + 1;
                 $number = (int)trim(substr($line, $numberPos));
