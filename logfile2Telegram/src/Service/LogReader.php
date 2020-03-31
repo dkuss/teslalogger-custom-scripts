@@ -15,7 +15,7 @@ class LogReader
         ' : offline',
         'TOKEN:',
         'Streamingtoken:',
-        'Distance:',
+        // 'Distance:',
         'ScanMyTesla FastMode:',
         'UpdateTripElevation',
         'GeocodeCache',
@@ -63,7 +63,7 @@ class LogReader
 
             foreach ($this->excludeLinesWith as $needle) {
                 if (strpos($line, $needle) !== false) {
-                    continue;
+                    continue 2;
                 }
             }
             if (strpos($line, 'Waiting for car to go to sleep') !== false) {
