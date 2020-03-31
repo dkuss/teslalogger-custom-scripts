@@ -10,6 +10,19 @@ class LogReader
     private $logLines;
     private $logLinesSeconds;
 
+    private $excludeLinesWith = [
+        'eocoding',
+        ' : offline',
+        'TOKEN:',
+        'Streamingtoken:',
+        'Distance:',
+        'ScanMyTesla FastMode:',
+        'UpdateTripElevation',
+        'GeocodeCache',
+        'Missing:',
+        'Mothership Timeout',
+    ];
+
     private function readInput()
     {
         $input = shell_exec('tail -n500 /etc/teslalogger/nohup.out');
@@ -48,32 +61,10 @@ class LogReader
                 continue;
             }
 
-            if (strpos($line, 'eocoding') !== false) {
-                continue;
-            }
-            if (strpos($line, ' : offline') !== false) {
-                continue;
-            }
-            if (strpos($line, 'TOKEN:') !== false) {
-                continue;
-            }
-            if (strpos($line, 'Streamingtoken:') !== false) {
-                continue;
-            }
-            if (strpos($line, 'Distance:') !== false) {
-                continue;
-            }
-            if (strpos($line, 'ScanMyTesla FastMode:') !== false) {
-                continue;
-            }
-            if (strpos($line, 'UpdateTripElevation') !== false) {
-                continue;
-            }
-            if (strpos($line, 'GeocodeCache') !== false) {
-                continue;
-            }
-            if (strpos($line, 'Missing:') !== false) {
-                continue;
+            foreach ($this->excludeLinesWith as $needle) {
+                if (strpos($line, $needle) !== false) {
+                    continue;
+                }
             }
             if (strpos($line, 'Waiting for car to go to sleep') !== false) {
                 $numberPos = strrpos($line, ' ') + 1;
