@@ -21,6 +21,7 @@ class LogReader
         'GeocodeCache',
         'Missing:',
         'Mothership Timeout',
+        '*** Check new Version ***',
     ];
 
     private function readInput()
