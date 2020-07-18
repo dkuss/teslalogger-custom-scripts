@@ -22,6 +22,8 @@ class LogReader
         'Missing:',
         'Mothership Timeout',
         '*** Check new Version ***',
+        'ShiftStateChange:',
+        'change TeslaLogger state:',
     ];
 
     private function readInput()
