@@ -23,7 +23,9 @@ class LogReader
         'Mothership Timeout',
         '*** Check new Version ***',
         'ShiftStateChange:',
-        'change TeslaLogger state:',
+        // 'change TeslaLogger state:',
+        'Checking TeslaLogger online update',
+        'TeslaLogger is up to date',
     ];
 
     private function readInput()
