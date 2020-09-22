@@ -26,6 +26,11 @@ class LogReader
         // 'change TeslaLogger state:',
         'Checking TeslaLogger online update',
         'TeslaLogger is up to date',
+        'execute:',
+        'Filesystem',
+        '/etc/teslalogger',
+        'Housekeeping:',
+        'Table:',
     ];
 
     private function readInput()

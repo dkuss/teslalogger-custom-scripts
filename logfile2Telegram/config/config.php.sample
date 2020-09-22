@@ -1,6 +1,7 @@
 <?php
 return [
     'env' => 'prod', // 'dev' or 'prod'
+    'verbose' => true, // auf false setzen um nur Letze Ladung und letzten Trip als Message zu bekommen
     'telegram_bot_identifier' => 'bot<MY_BOT_IDENTIFIER>',
     'telegram_chat_id' => '<MY_CHAT_ID>',
     'db_host' => 'localhost',

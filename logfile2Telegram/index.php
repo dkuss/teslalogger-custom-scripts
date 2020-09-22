@@ -21,8 +21,10 @@ $chargeFinder = new ChargeFinder();
 
 $seconds = 305;
 
-$logLines = $logReader->getLogLines($seconds);
-$telegramMessage->addLogLines($logLines);
+if ($config['verbose'] === true) {
+    $logLines = $logReader->getLogLines($seconds);
+    $telegramMessage->addLogLines($logLines);
+}
 
 $trips = $tripFinder->findTrips($seconds);
 $telegramMessage->addTrips($trips);
