@@ -31,6 +31,7 @@ class LogReader
         '/etc/teslalogger',
         'Housekeeping:',
         'Table:',
+        'TeslaLogger process statistics',
     ];
 
     private function readInput()
