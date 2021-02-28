@@ -32,6 +32,12 @@ class LogReader
         'Housekeeping:',
         'Table:',
         'TeslaLogger process statistics',
+        'Stream: Timeout',
+        'shift_state:',
+        'Result.Statuscode: 408',
+        'Stream Data Error:',
+        'Exec_mono:',
+        'GetAvgConsumption:',
     ];
 
     private function readInput()
