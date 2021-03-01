@@ -38,6 +38,7 @@ class LogReader
         'Stream Data Error:',
         'Exec_mono:',
         'GetAvgConsumption:',
+        'CloseChargingState()',
     ];
 
     private function readInput()
