@@ -39,6 +39,8 @@ class LogReader
         'Exec_mono:',
         'GetAvgConsumption:',
         'CloseChargingState()',
+        'ShareData:',
+        'GetOutsideTempAsync: ',
     ];
 
     private function readInput()
